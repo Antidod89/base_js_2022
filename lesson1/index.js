@@ -1,5 +1,3 @@
-let pay = confirm ('Оплата произведена наличными?');
+let pay = "тест";
 
-console.log (pay)
-
-let a = 1;
+console.log (pay);
