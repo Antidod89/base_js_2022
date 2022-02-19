@@ -1,3 +1,3 @@
 let pay = "тест";
 
-console.log (pay);
+console.log(pay);
