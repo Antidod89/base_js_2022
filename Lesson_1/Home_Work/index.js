@@ -84,9 +84,11 @@ var user3 = {
     age: 18,
     city: "N.Novgorod"
 };
+console.log(user3.age);
 console.log(user3);
 user3 = "Vasya";
 user3.age = 20;
+console.log(user3);
 console.log(user3.age);
 
 
