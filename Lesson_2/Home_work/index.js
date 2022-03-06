@@ -58,7 +58,7 @@ console.log(1 === "1");
 //false
 console.log("2" > 10);
 
-//true
+//false
 console.log(NaN == undefined);
 
 
