@@ -245,9 +245,30 @@
 
 // 6. Дана строка из 6-ти цифр. Проверьте, что сумма первых трех цифр равняется сумме вторых трех цифр. Если это так - выведите 'да', в противном случае выведите 'нет'.
 
-// const myNamber = "123125";
-// const firstNumbers = Number(myNamber[0]) + Number(myNamber[1]) + Number(myNamber[2]);
-// const secondNumbers = Number(myNamber[3]) + Number(myNamber[4]) + Number(myNamber[5]);
+// решение через цикл
+// const myNumber = "511520";
+// let firstNumbers = 0;
+// let secondNumbers = 0;
+
+// for (let counter = 0; counter < 3; counter++) {
+//     firstNumbers += +myNumber[counter];
+//     console.log(myNumber[counter]);
+// }
+// for (let counter = 3; counter < 6; counter++) {
+//     secondNumbers += +myNumber[counter];
+//     console.log(secondNumbers);
+// }
+
+// if (firstNumbers === secondNumbers) {
+//     console.log("Да");
+// } else {
+//     console.log("Нет");
+// }
+
+// второе решение
+// const myNumber = "123125";
+// const firstNumbers = Number(myNumber[0]) + Number(myNumber[1]) + Number(myNumber[2]);
+// const secondNumbers = Number(myNumber[3]) + Number(myNumber[4]) + Number(myNumber[5]);
 
 // if (firstNumbers === secondNumbers) {
 //     console.log("Да");
@@ -293,11 +314,18 @@
 
 // for (let counter = 0; counter <= 100; counter++) {
 
-//     if (counter > 0 && counter % 2 == 0) {
+//     if (counter % 2 == 0) {
 //     console.log(counter);
 //     }
 // }
 
+// решение через continue
+// for (let counter = 0; counter <= 100; counter++) {
+
+//     if (counter % 2 != 0) continue;
+//     console.log(counter);
+    
+// }
 // 4. С помощью цикла найдите сумму чисел от 1 до 100.
 
 // let counter = 1;
