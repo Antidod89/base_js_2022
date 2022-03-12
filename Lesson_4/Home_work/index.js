@@ -342,3 +342,50 @@
 //     sum += counter
 // }
 // console.log(sum);
+
+// задачи с лекции 
+
+// 1. вывести в консоль строку N раз
+
+// const myString = "Строка";
+// const limit = 15;
+// let counter = 1;
+
+// for (let counter = 1; counter <= limit; counter++) {
+//     console.log(`${myString} - ${counter}`);
+// }
+// while (counter < limit) {
+//     counter++;
+//     console.log(`${myString} - ${counter}`);
+// }
+// do {
+//     counter++;
+//     console.log(`${myString} - ${counter}`);
+// } while (counter < limit);
+
+//2. Ежедневно количество доступных автомобилей в салоне уменьшается в два раза. Выяснить, на какой день продаж, количество доступных к покупке авто станет меньше M, если известно, что в первый день продаж всего было N автомобилей.
+
+// let carsAmount = 60;
+// const minCarsAmount = 10;
+// let day = 0;
+// for (let day = 1; carsAmount > minCarsAmount; day++) {
+//     carsAmount /= 2;
+//     if (carsAmount < minCarsAmount) {
+//         console.log(`На ${day} день`);
+//     }
+// }
+// while (carsAmount > minCarsAmount) {
+//     day++;
+//     carsAmount /= 2;
+//     if (carsAmount < minCarsAmount) {
+//         console.log(`На ${day} день`);
+//     }
+// }
+
+// do {
+//     day++;
+//     carsAmount /= 2;
+//     if (carsAmount < minCarsAmount) {
+//         console.log(`На ${day} день`);
+//     }
+// } while (carsAmount > minCarsAmount);
