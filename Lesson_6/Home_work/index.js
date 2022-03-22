@@ -118,14 +118,134 @@
 
 // 8. Напишите функцию zeros(num, len), которая дополняет нулями до указаной длины числовое значение с дополнительным знаком «+» или «-» в зависимости от передаваемого аргумента.
 
-const zeros = (num, len, sign) => {
-    let numberOfZeros = len - num.toString().length;
-    console.log(numberOfZeros);
-    let stringWithZeros = '';
-      for (; numberOfZeros > 0; numberOfZeros--) {
-        stringWithZeros += 0;
-      }
-      return (sign === undefined || sign === '') ? stringWithZeros + num + '' : sign + stringWithZeros + num +'';
-    };
+// const zeros = (num, len, sign) => {
+//     let numberOfZeros = len - num.toString().length;
+//     let stringWithZeros = '';
+//     for (; numberOfZeros > 0; numberOfZeros--) {
+//         stringWithZeros += 0;
+//     };
+//     if (sign === undefined || sign === '') {
+//         return stringWithZeros + num;
+//     }
+//     return sign + stringWithZeros + num;
+//     };
 
-console.log(zeros(111, 7, "-"));
+// console.log(zeros(111, 7, "+"));
+
+// 9. Напишите функцию comparison(str1, str2), которая сравнивает строки без учёта регистра символов.
+
+// const comparison = (str1, str2) => {
+//     return str1.toLowerCase() === str2.toLowerCase();
+// };
+
+// console.log(comparison("LoRem", "lOrEm"));
+
+// 10. Напишите функцию insensitiveSearch(str1, str2), которая осуществляет поиск подстроки str2 в строке str1 без учёта регистра символов.
+
+// const myString1 = "Lorem ipsum dolor sit amet";
+
+// const myString2 = "Dolor";
+
+// const insensitiveSearch = (str1, str2) => {
+//     const idIndex = str1.toLowerCase().indexOf(str2.toLowerCase());
+//     if (idIndex != -1) {
+//         return `Строка найдена, индекс - ${idIndex}`;
+//     };
+//     return "Строка не найдена";
+// };
+
+// console.log(insensitiveSearch(myString1, myString2));
+
+// 11. Напишите функцию initCap(str), которая преобразует стиль написания составных слов строки в CamelCase, при котором несколько слов пишутся слитно без пробелов, при этом каждое слово внутри строки пишется с заглавной буквы.
+
+// const myString = "Lorem ipsum dolor sit amet";
+
+// первое решение
+// const initCap = (str) => {
+//     return str.toLowerCase().replace(/(?:^|\s)[a-z]/g, (str) => {
+//         return str.toUpperCase().replace(/\s+/g, "");
+//     });
+// };
+
+// console.log(initCap(myString));
+
+// второе решение
+// const initCap = (str) => {
+//     return str.split(" ").map((element) => {
+//         return element[0].toUpperCase() + element.slice(1);
+//     }).join("");
+// };
+
+// console.log(initCap(myString));
+
+// 12. Напишите функцию initSnake(str), которая преобразует стиль написания составных слов строки из CamelCase в snake_case, при котором несколько слов разделяются символом подчеркивания (_), причём каждое слово пишется с маленькой буквы.
+
+// const myString = "Lorem ipsum dolor sit amet";
+
+// const initSnake = (str) => {
+//     return str.split(" ").map((element) => {
+//         return element.toLowerCase();
+//     }).join("_");
+// };
+
+// console.log(initSnake(myString));
+
+// 13. Напишите функцию repeatStr(str, n), которая возвращает строку повторяемую определённое количество раз.
+
+// const myString = "Lorem!";
+
+// const repeatStr = (str, n) => {
+//     return str.repeat(n);
+// };
+
+// console.log(repeatStr(myString, 5));
+
+// 14. Напишите функцию path(pathname), которая возвращает имя файла (подстрока после последнего символа "\" ) из полного пути к файлу.
+
+// const pathName = "/Lesson_6/Home_work/index.js";
+
+// const path = (pathname) => {
+//     return pathname.split("/").pop();
+// };
+
+// console.log(path(pathName));
+
+// 15. Создайте метод объекта String endsWith(), который сравнивает подстроку str1 с окончанием исходной строки str и определяет заканчивается ли строка символами подстроки.
+
+// const myString = "Lorem ipsum dolor sit amet";
+
+// const isStrEndsWithSubstr = (str, str1) => {
+//     return str.endsWith(str1);
+// };
+
+// console.log(isStrEndsWithSubstr(myString, "et"));
+
+// 16. Напишите функцию getSubstr(str, char, pos), которая возвращает часть строки, расположенную после или до указанного символа char в зависимости от параметра pos.
+
+// const myString = "Lorem ipsum - dolor sit amet";
+
+// const getSubstr = (str, char, pos) => {
+//     if (pos === "До") {
+//         return str.slice(str.indexOf(char) + 1).trim();
+//     } else if (pos === "После") {
+//         return str.slice(0, str.indexOf(char)).trim()
+//     };
+//     return str;
+// };
+
+// console.log(getSubstr(myString, "-", "До"));
+
+// 17. Напишите функцию insert(str, substr, pos), которая вставляет подстроку substr в указанную позицию pos строки str. По умолчанию подстрока вставляется в начало строки.
+
+// const myString = "Lorem ipsum dolor sit amet";
+
+// const insert = (str, substr, pos) => {
+//     if (pos === undefined || pos === 0) {
+//         return substr + str;
+//     }
+//     const arr = str.split('');
+//     arr.splice(pos, 0, substr);
+//     return arr.join("");
+// };
+
+// console.log(insert(myString, "12345", 6));
