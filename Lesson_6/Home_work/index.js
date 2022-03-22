@@ -74,34 +74,58 @@
 
 // const myString = "КаЖдЫй ОхОтНиК";
 
+// первое решение
+
 // const changeRegister = (str) => {
 //     let upperCase = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
-//     let lowerCase = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 //     let result = [];
 //     for (let i = 0; i < str.length; i++) {
 //         if (upperCase.includes(str[i])) {
 //             result.push(str[i].toLowerCase());
-//         } else if (lowerCase.includes(str[i])) {
-//             result.push(str[i].toUpperCase());
 //         } else {
-//             result.push(str[i]);
-//         }
+//             result.push(str[i].toUpperCase());
+//         };
 //     };
 //     return result.join("");
 // };
 
 // console.log(changeRegister(myString));
 
-var ch = 'КаЖдЫй ОхОтНиК';
-let result = [];
-for (let i = 0; i < ch.length; i++) {
-    if (ch === ch.toUpperCase())
-    result.push(ch[i].toLowerCase());
-}
-
-console.log(result);
-// if (ch === ch.toUpperCase()) {
-//   // в верхнем
-// } else {
-//   // в нижнем 
+// второе решение
+// const changeRegister = (str) => {
+//     let result = [];
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === str[i].toUpperCase()) {
+//             result.push(str[i].toLowerCase());
+//         } else {
+//             result.push(str[i].toUpperCase());
+//         };
+//     };
+//     return result.join("");
 // }
+
+// console.log(changeRegister(myString));
+
+// 7. Напишите функцию removeChar(str), которая возвращает строку, очищенную от всех не буквенно-цифровых символов.
+
+// const myString = "11. lorem1! ipsum! dolor%% sit; amet?";
+
+// const removeChar = (str) => {
+//     return str.replace(/[^a-zа-яё\s]/gi, '').trim();
+// }
+
+// console.log(removeChar(myString));
+
+// 8. Напишите функцию zeros(num, len), которая дополняет нулями до указаной длины числовое значение с дополнительным знаком «+» или «-» в зависимости от передаваемого аргумента.
+
+const zeros = (num, len, sign) => {
+    let numberOfZeros = len - num.toString().length;
+    console.log(numberOfZeros);
+    let stringWithZeros = '';
+      for (; numberOfZeros > 0; numberOfZeros--) {
+        stringWithZeros += 0;
+      }
+      return (sign === undefined || sign === '') ? stringWithZeros + num + '' : sign + stringWithZeros + num +'';
+    };
+
+console.log(zeros(111, 7, "-"));
