@@ -63,24 +63,6 @@
 
 // const myString = "КаЖдЫй ОхОтНиК";
 
-// первое решение
-
-// const changeRegister = (str) => {
-//     let upperCase = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
-//     let result = [];
-//     for (let i = 0; i < str.length; i++) {
-//         if (upperCase.includes(str[i])) {
-//             result.push(str[i].toLowerCase());
-//         } else {
-//             result.push(str[i].toUpperCase());
-//         };
-//     };
-//     return result.join("");
-// };
-
-// console.log(changeRegister(myString));
-
-// второе решение
 // const changeRegister = (str) => {
 //     let result = [];
 //     for (let i = 0; i < str.length; i++) {
@@ -97,10 +79,10 @@
 
 // 7. Напишите функцию removeChar(str), которая возвращает строку, очищенную от всех не буквенно-цифровых символов.
 
-// const myString = "11. lorem1! ipsum! dolor%% sit; amet?";
+// const myString = "..; 1lore$$$m1! ipsum! 5dolor%% sit;77 amet?";
 
 // const removeChar = (str) => {
-//     return str.replace(/[^a-zа-яё\s]/gi, '').trim();
+//     return str.replace(/[^a-zа-яё0-9\s]/gi, '').trim();
 // }
 
 // console.log(removeChar(myString));
@@ -138,9 +120,9 @@
 // const insensitiveSearch = (str1, str2) => {
 //     const idIndex = str1.toLowerCase().indexOf(str2.toLowerCase());
 //     if (idIndex != -1) {
-//         return `Строка найдена, индекс - ${idIndex}`;
+//         return `Подстрока найдена, индекс - ${idIndex}`;
 //     };
-//     return "Строка не найдена";
+//     return "Подстрока не найдена";
 // };
 
 // console.log(insensitiveSearch(myString1, myString2));
@@ -149,16 +131,6 @@
 
 // const myString = "Lorem ipsum dolor sit amet";
 
-// первое решение
-// const initCap = (str) => {
-//     return str.toLowerCase().replace(/(?:^|\s)[a-z]/g, (str) => {
-//         return str.toUpperCase().replace(/\s+/g, "");
-//     });
-// };
-
-// console.log(initCap(myString));
-
-// второе решение
 // const initCap = (str) => {
 //     return str.split(" ").map((element) => {
 //         return element[0].toUpperCase() + element.slice(1);
@@ -178,6 +150,7 @@
 // };
 
 // console.log(initSnake(myString));
+
 
 // 13. Напишите функцию repeatStr(str, n), которая возвращает строку повторяемую определённое количество раз.
 
@@ -217,7 +190,7 @@
 //     if (pos === "До") {
 //         return str.slice(str.indexOf(char) + 1).trim();
 //     } else if (pos === "После") {
-//         return str.slice(0, str.indexOf(char)).trim()
+//         return str.slice(0, str.indexOf(char)).trim();
 //     };
 //     return str;
 // };
@@ -238,3 +211,65 @@
 // };
 
 // console.log(insert(myString, "12345", 6));
+
+// 18. Напишите функцию limitStr(str, n, symb), которая обрезает строку, если она длиннее указанного количества символов n. Усеченная строка должна заканчиваться троеточием «...» (если не задан параметр symb) или заданным символом symb.
+
+// const myString = "Lorem ipsum dolor sit amet";
+
+// const limitStr = (str, n, symb) => {
+//     if (str.length <= n) {
+//         return str;
+//     } else if (!symb) {
+//         return str.substr(0, n) + "...";
+//     };
+//     return str.substr(0, n) + symb;
+// };
+
+// console.log(limitStr(myString, 7, "***"));
+
+// 19. Напишите функцию count(str, stringsearch), которая возвращает количество символов stringsearch в строке str.
+
+// const myString = "Lorem ipsum dolor sit amet";
+
+// const count = (str, stringsearch) => {
+//     return str.split(stringsearch).length - 1;
+// };
+
+// console.log(count(myString, "o"));
+
+// 20. Напишите функцию strip(str), которая удаляет все лишние пробелы из строки str.
+
+// const myString = "     Lorem ipsum     dolor    sit  amet  ";
+
+// const strip = (str) => {
+//     const stringToarray = str.split(' ');
+//     let newArr = [];
+//     for (i = 0; i < stringToarray.length; i++) {
+//         if (stringToarray[i] != '') {
+//             newArr.push(stringToarray[i]);
+//         };
+// };
+//     return newArr.join(" ");
+// };
+
+// console.log(strip(myString));
+
+// 21. Напишите функцию cutString(str, n), которая удаляет лишние слова из строки str, оставив в ней n слов.
+
+// const myString = "Lorem ipsum dolor sit amet";
+
+// const cutString = (str, n) => {
+//     return str.split(" ").splice(0, n).join(" ");
+// };
+
+// console.log(cutString(myString, 3));
+
+// 22. Напишите функцию findWord(word, str), которая проверяет, существует ли в строке str слова word.
+
+// const myString = "Lorem ipsum dolor word sit amet";
+
+// const findWord = (word, str) => {
+//     return str.indexOf(word) != -1;
+// };
+
+// console.log(findWord("word", myString));
