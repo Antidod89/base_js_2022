@@ -49,7 +49,6 @@
 
 // 5. Напишите функцию capitalize(str), которая возвращает строку, в которой каждое слово начинается с заглавной буквы.
 
-// первое решение
 // const myString = "lorem ipsum dolor sit amet";
 
 // const capitalize = (str) => {
