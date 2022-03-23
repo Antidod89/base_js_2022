@@ -268,7 +268,7 @@
 
 // for (let n = 1000; n > 50; num++) {
 //     n /= 2;
-//     console.log(n);
+//     return n;
 // }
-
+// console.log(n);
 // console.log(`Количество итераций - ${num}`);

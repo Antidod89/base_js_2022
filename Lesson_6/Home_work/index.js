@@ -60,16 +60,6 @@
 
 // console.log(capitalize(myString));
 
-// второе решение
-
-// const capitalize = (str) => {
-//     return str.replace(/(^|\s)\S/g, (value) => {
-//         return value.toUpperCase()
-//     });
-// };
-
-// console.log(capitalize(myString));
-
 // 6. Напишите функцию changeRegister(str), которая принимает в качестве аргумента строку и и заменяет регистр каждого символа на противоположный. Например, если вводится «КаЖдЫй ОхОтНиК», то на выходе должно быть «кАжДыЙ оХоТнИк».
 
 // const myString = "КаЖдЫй ОхОтНиК";

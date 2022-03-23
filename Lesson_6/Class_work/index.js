@@ -147,3 +147,18 @@
 //     return str.replaceAll(find, raplce) 
 // };
 // console.log(replaceFunc(myConst, "word", "nnnn"));
+
+
+const replaceAll = (str, subStr, replaceStr) => {
+    for (let i = 0; i < str.length; i++) {
+        let foundIndex = str.indexOf(subStr);
+        if (foundIndex === -1) return str;
+        str =
+            str.slice(0, foundIndex) +
+            replaceStr +
+            str.slice(foundIndex + subStr.length);
+    }
+    return str;
+};
+
+console.log(replaceAll("widget for id", "id", "xxx"));
