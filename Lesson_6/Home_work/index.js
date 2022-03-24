@@ -141,7 +141,7 @@
 
 // 12. Напишите функцию initSnake(str), которая преобразует стиль написания составных слов строки из CamelCase в snake_case, при котором несколько слов разделяются символом подчеркивания (_), причём каждое слово пишется с маленькой буквы.
 
-// const myString = "Lorem ipsum dolor sit amet";
+const myString = "LoremIpsumDolorSitAmet";
 
 // const initSnake = (str) => {
 //     return str.split(" ").map((element) => {
@@ -149,8 +149,20 @@
 //     }).join("_");
 // };
 
-// console.log(initSnake(myString));
+const initSnake = (str) => {
+    let test1 = str.split("");
+    let test2 = [];
+    for (let i = 0; i < test1.length; i++) {
+        if (test1[i] === test1[i].toUpperCase()) {
+            test2.push(" " + test1[i].toLowerCase());
+        } else {
+            test2.push(test1[i]);
+        }
+    }
+    return test2.join('').trim().split(" ").join('_');
+    };
 
+console.log(initSnake(myString));
 
 // 13. Напишите функцию repeatStr(str, n), которая возвращает строку повторяемую определённое количество раз.
 
