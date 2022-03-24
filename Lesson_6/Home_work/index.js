@@ -95,7 +95,7 @@
 //     for (; numberOfZeros > 0; numberOfZeros--) {
 //         stringWithZeros += 0;
 //     };
-//     if (sign === undefined || sign === '') {
+//     if (!sign || sign === '') {
 //         return stringWithZeros + num;
 //     }
 //     return sign + stringWithZeros + num;
@@ -141,28 +141,15 @@
 
 // 12. Напишите функцию initSnake(str), которая преобразует стиль написания составных слов строки из CamelCase в snake_case, при котором несколько слов разделяются символом подчеркивания (_), причём каждое слово пишется с маленькой буквы.
 
-const myString = "LoremIpsumDolorSitAmet";
+// const myString = "LoremIpsumDolorSitAmet";
 
 // const initSnake = (str) => {
-//     return str.split(" ").map((element) => {
-//         return element.toLowerCase();
-//     }).join("_");
+//     return str.split("").map((element) => {
+//         return (element === element.toUpperCase()) ?  " " + element.toLowerCase() : element;
+//     }).join("").trim().split(" ").join("_");
 // };
 
-const initSnake = (str) => {
-    let test1 = str.split("");
-    let test2 = [];
-    for (let i = 0; i < test1.length; i++) {
-        if (test1[i] === test1[i].toUpperCase()) {
-            test2.push(" " + test1[i].toLowerCase());
-        } else {
-            test2.push(test1[i]);
-        }
-    }
-    return test2.join('').trim().split(" ").join('_');
-    };
-
-console.log(initSnake(myString));
+// console.log(initSnake(myString));
 
 // 13. Напишите функцию repeatStr(str, n), которая возвращает строку повторяемую определённое количество раз.
 
@@ -214,15 +201,15 @@ console.log(initSnake(myString));
 // const myString = "Lorem ipsum dolor sit amet";
 
 // const insert = (str, substr, pos) => {
-//     if (pos === undefined || pos === 0) {
+//     if (!pos || pos === 0) {
 //         return substr + str;
-//     }
+//     };
 //     const arr = str.split('');
 //     arr.splice(pos, 0, substr);
 //     return arr.join("");
 // };
 
-// console.log(insert(myString, "12345", 6));
+// console.log(insert(myString, "123", 6));
 
 // 18. Напишите функцию limitStr(str, n, symb), которая обрезает строку, если она длиннее указанного количества символов n. Усеченная строка должна заканчиваться троеточием «...» (если не задан параметр symb) или заданным символом symb.
 
