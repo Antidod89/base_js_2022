@@ -13,9 +13,6 @@
 // const myString = "Lorem ipsum dolor sit amet";
 
 // const deleteСharacters = (str, length) => {
-//     if (typeof str != "string" || str.length <= 0) {
-//         return "Пустая строка или не является строкой";
-//     };
 //     return str.slice(0, length)
 // };
 
@@ -26,9 +23,6 @@
 // const myString = "Lorem ipsum dolor sit amet";
 
 // const insertDash = (str) => {
-//     if (typeof str != "string" || str.length <= 0) {
-//         return "Пустая строка или не является строкой";
-//     };
 //     return str.toUpperCase().replace(/\s/g, '-');
 // };
 
@@ -39,9 +33,6 @@
 // const myString = "lorem ipsum dolor sit amet";
 
 // const firstSymbolToUpperCase = (str) => {
-//     if (typeof str != "string" || str.length <= 0) {
-//         return "Пустая строка или не является строкой";
-//     };
 //     return str[0].toUpperCase() + str.slice(1);
 // };
 
