@@ -100,7 +100,20 @@ const getArrUniqueValues = (arr) => {
 const myString = "LoremIpsum";
 
 const arr = (str) => {
-    return str.split('').map((el, i, arr) => (arr[i-1])arr[i-1] + el + arr[i+1]);
+    let newArr = [];
+    return str.split('').map((el, i, arr) => {
+        // console.log(!!arr[i-1] && !!arr[i+1]);
+        if (!arr[i-1]) {
+            console.log(arr.indexOf());
+            return el + arr[i+1]+ arr[i+2]
+            // return arr[i-1] + el + arr[i+1]
+        } else if (!arr[i+1]) {
+            return arr[i-2] + arr[i-1] + el
+        } else {
+            // return el + arr[i+1] + arr[i+2]
+        }
+        // return el + arr[i+1] + 
+    });
 
 }
 
