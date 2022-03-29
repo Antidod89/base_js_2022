@@ -2,7 +2,7 @@
 
 // Написать функцию, которая будет принимать массив чисел, содержащий целые положительные и целые отрицательные числа, в качестве результата возвращать сумму четных положительных элементов переданного массива.
 
-// const arr = [1, 1, 11, -15, 5, -4, 5, -1, 11];
+// const arr = [1, 2, 10, -15, 5, -4, 5, -1, 10];
 
 // const getsSumOfPositiveNumbers = (arr) => {
 //     let sum = 0;
@@ -62,9 +62,7 @@ const getArrUniqueValues = (arr) => {
 
 // const currentSums = (numbers) => {
 //     let result = [];
-//     numbers.reduce((accum, current, index) => {
-//         return result[index] = accum + current;
-//     }, 0);
+//     numbers.reduce((accum, current, index) => result[index] = accum + current, 0);
 //     return result;
 // };
 
