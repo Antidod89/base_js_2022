@@ -24,11 +24,11 @@
 // console.log(getArrUniqueValues(arr));
 
 // второе решение
-// const getArrUniqueValues = (arr) => {
-//     return arr.filter((elem, pos) => {
-//         return arr.indexOf(elem) === pos;
-//     });
-// };
+const getArrUniqueValues = (arr) => {
+    return arr.filter((elem, pos) => {
+        return arr.indexOf(elem) === pos;
+    });
+};
 
 // console.log(getArrUniqueValues(arr));
 
@@ -72,3 +72,38 @@
 
 // 3. Напишите код, который получает из массива чисел новый массив, содержащий пары чисел, которые в сумме должны быть равны семи: (0:7), (1:6) и т.д.
 
+// const numbers = [0, 1, 2, 3, 4, 5, 6, 7];
+
+// const sumSeven = (numbers) => {
+//     const reverseArr = numbers.reverse();
+//     return numbers
+//     .reduce((accum, current, i) => {
+//     reverseArr.forEach(item => {
+//     item + current === 7 ? accum.push(`(${item}:${current})`) : accum
+//     })
+//     return accum.slice(0, numbers.length/2)
+//     }, [])
+//     }
+
+// console.log(sumSeven(numbers));
+
+// 4. Напишите код, создающий массив, который будет состоять из первых букв слов строки str.
+
+// const myString = "lorem ipsum dolor sit amet";
+
+// const getFirstChar = (str) => {
+//     return str.split(" ").map((elem) => elem[0]);
+// }
+
+// console.log(getFirstChar(myString));
+
+// 5. Напишите код, создащий массив, который будет состоять из строк, состоящих из предыдущего, текущего и следующего символа строки str.
+
+const myString = "LoremIpsum";
+
+const arr = (str) => {
+    return str.split('').map((el, i, arr) => (arr[i-1])arr[i-1] + el + arr[i+1]);
+
+}
+
+console.log(arr(myString));
