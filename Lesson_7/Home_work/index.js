@@ -24,11 +24,11 @@
 // console.log(getArrUniqueValues(arr));
 
 // второе решение
-const getArrUniqueValues = (arr) => {
-    return arr.filter((elem, pos) => {
-        return arr.indexOf(elem) === pos;
-    });
-};
+// const getArrUniqueValues = (arr) => {
+//     return arr.filter((elem, pos) => {
+//         return arr.indexOf(elem) === pos;
+//     });
+// };
 
 // console.log(getArrUniqueValues(arr));
 
@@ -104,10 +104,10 @@ const arr = (str) => {
     return str.split('').map((el, i, arr) => {
         // console.log(!!arr[i-1] && !!arr[i+1]);
         if (!arr[i-1]) {
-            // console.log(el + arr[i+1]+ arr[i+2]);
+            console.log(arr.length);
             return el + arr[i+1]+ arr[i+2]
             // return arr[i-1] + el + arr[i+1]
-        } else if (arr[i+1]) {
+        } else if (!arr[i+1] && arr.length === 10) {
             return arr[i-2] + arr[i-1] + el
         } else {
             // console.log(el + arr[i+1] + arr[i+2]);
