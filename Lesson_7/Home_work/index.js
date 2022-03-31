@@ -1,4 +1,4 @@
-// Практика 1
+// Class work Практика 1
 
 // Написать функцию, которая будет принимать массив чисел, содержащий целые положительные и целые отрицательные числа, в качестве результата возвращать сумму четных положительных элементов переданного массива.
 
@@ -16,7 +16,7 @@
 
 // const arr = [1, 2, 1, 10, 15, 5, 1, 5, 2, 10, 6];
 
-// // первое решение
+// первое решение
 // const getArrUniqueValues = (arr) => {
 //   return Array.from(new Set(arr));
 // };
@@ -45,7 +45,22 @@
 
 // console.log(checkArrForEquality(arr1, arr2));
 
-// Практика 2
+// Class work Практика 2
+
+// Создайте объект и скопируйте данный объект с помощью: Object.assign() и spread оператора. Изменить любое свойство в копии объекта, и проверить не изменился ли исходный.
+
+// const people = [
+//   { name: "Владилен", age: 25 },
+//   { name: "Елена", age: 17 },
+//   { name: "Игорь", age: 49 },
+// ];
+
+// const secondObj = { ...people };
+// secondObj[0].name = "Петя";
+
+// console.log(secondObj);
+// console.log(people);
+
 
 // 1. Используя метод map() напишите код, который получает из массива строк новый массив, содержащий их длины.
 
@@ -152,40 +167,16 @@
 
 // 10. Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
 
-// const arr = [5, 1, 3, 4, 6, 9]
+// const arr = [5, 1, 3, 4, 6, 9];
 
-// const test = (arr) => {
-//     let num = 0;
-//     return arr.reduce((accum, current, i) => {
-//         if (accum > 10) {
-//             num++
-//             console.log(accum + current);
-//             return accum + current
-//         } else {
-//             // num++;
-//             // console.log(i);
-//             // return accum + current
-//         }
-//     }, 0);
-// }
+// const getSumOfElements = (arr) => {
+//   return arr.reduce(
+//     (elem, current) => (elem[1] < 10 ? [elem[0] + 1, elem[1] + current] : elem),
+//     [0, 0]
+//   )[0];
+// };
 
-// console.log(test(arr));
-
-// var arr = [1, 2, 3, 0, 4, 5, 6];
-// var num = 1;
-// var result = arr.reduce(function(sum, elem) {
-// 	if (sum > 10) {
-// 		console.log(num);
-// 		return;
-// 	} else {
-// 		// num++;
-// 		return sum + elem;
-// 	}
-// });
-
-const arr = [5, 1, 3, 4, 6, 9];
-        console.log(arr.reduce((p, c) => p[1] < 10 ? [p[0] + 1, p[1] + c] : p, [0, 0])[0]);
-
+// console.log(getSumOfElements(arr));
 
 // 11. Напишите функцию arrayFill, которая будет заполнять массив заданными значениями. Первым параметром функция принимает значение, которым заполнять массив, а вторым - сколько элементов должно быть в массиве. Пример: arrayFill('x', 5) сделает массив ['x', 'x', 'x', 'x', 'x'].
 
