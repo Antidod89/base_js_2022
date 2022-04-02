@@ -111,10 +111,62 @@
 
 // forEach 
 
-const users = [
-  { id: 1, name: "Vasya", isAdmin: false },
-  { id: 2, name: "Olga", isAdmin: false },
-  { id: 3, name: "Petya", isAdmin: true },
-  { id: 4, name: "Maksim", isAdmin: false }
-];
+// const users = [
+//   { id: 1, name: "Vasya", isAdmin: false },
+//   { id: 2, name: "Olga", isAdmin: false },
+//   { id: 3, name: "Petya", isAdmin: true },
+//   { id: 4, name: "Maksim", isAdmin: false }
+// ];
+
+// let myVar = 1;
+// let myVar2 = myVar;
+
+// myVar2 = 3;
+
+// console.log(myVar);
+// console.log(myVar2);
+
+// const myObject = {name: "Vasya"};
+// const myObject2 = myObject;
+
+// myObject2.name = "Petya";
+
+// console.log(myObject, myObject2);
+
+// const myObject = {name: "Vasya"};
+// const myObject2 = Object.assign({}, myObject);
+// const myObject2 = { ...myObject }
+
+// const { name } = myObject2;
+// console.log(name);
+// myObject2.name = "Petya";
+
+// console.log(myObject, myObject2);
+
+// const myArray = [5, 4, 2, 6];
+
+// const myArray2 = [10, 12, 8];
+
+// const newArray = [...myArray, ...myArray2];
+
+// console.log(newArray);
+
+// const myFunc = (arg1, arg2, ...args) => {
+//   console.log(arg1);
+//   console.log(arg2);
+//   console.log(args);
+// }
+
+// myFunc(5, 2, 4, 7, 10, 20)
+
+
+// const myObject = { name: "Vasya", age: 20, gender: "male"};
+
+// const newArray = [];
+
+// for (let key in myObject) {
+//   newArray.push(myObject[key])
+// }
+
+// console.log(newArray);
 

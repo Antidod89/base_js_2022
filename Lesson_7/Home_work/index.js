@@ -75,7 +75,7 @@
 // const numbers = [2, 3, 5, 7, 11, 13, 17, 19];
 
 // const currentSums = (numbers) => {
-//     let result = [];
+//     const result = [];
 //     numbers.reduce((accum, current, index) => result[index] = accum + current, 0);
 //     return result;
 // };
