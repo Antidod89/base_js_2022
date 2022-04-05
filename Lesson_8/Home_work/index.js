@@ -54,23 +54,46 @@
 // test1()
 
 // test1()
-let timer = 60;
+// let timer = 60;
 
-function countDownTimer() {
-    --timer;
+// function countDownTimer() {
+//     --timer;
 
   
-  console.log(timer);
-  if (timer > 57) {
-    console.log(timer);
-    // document.getElementById("myTimer").innerHTML = timer;
-    // updatePLEASE();
-    setTimeout(countDownTimer, 1000,); /* replicate wait 1 second */
+//   console.log(timer);
+//   if (timer > 57) {
+//     console.log(timer);
+//     // document.getElementById("myTimer").innerHTML = timer;
+//     // updatePLEASE();
+//     setTimeout(countDownTimer, 1000,); /* replicate wait 1 second */
+//   } else {
+//     console.log(`Работа таймера завершена на ${timer} сек.`);
+//   }
+// }
+// countDownTimer(timer);
+
+// let startTimer = 60;
+
+const timer = (start, end) => {
+    --start;
+  if (start > end) {
+    console.log(start);
+    setTimeout(() => timer(start, end), 1000); 
   } else {
-    console.log(`Работа таймера завершена на ${timer} сек.`);
+    console.log(`Работа таймера завершена на ${start} сек.`);
   }
+  
 }
-countDownTimer(timer);
+timer(60,56);
+
+
+
+
+
+
+
+
+
 
 // var target = 60; // 25 mins
 // var current = 0; // 0 secs
