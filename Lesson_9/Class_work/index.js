@@ -209,30 +209,76 @@
 //Создайте класс People, он должен содержать свойства  name (имя), surname (фамилия) и метод getFullName() (возвращает полное имя человека). Создайте класс Worker который будет наследоваться от класса People. Класс Worker должен содержать свойства name, surname унаследованные от родительского класса, и свойства rate (ставка по которой происходит оплата руб/день), day (количество отработанных дней) и метод getSalary() (возвращает заработную плату сотрудника).
 // Создать несколько экземпляров класса Worker с различными данными и проверить корректность работы.
 
-class People {
-  constructor(props) {
-    this.name = props.name;
-    this.surname = props.surname;
-  }
-  getFullName() {
-    console.log(`${this.name} ${this.surname}`);
-  }
-}
+// class People {
+//   constructor(props) {
+//     this.name = props.name;
+//     this.surname = props.surname;
+//   }
+//   getFullName() {
+//     console.log(`${this.name} ${this.surname}`);
+//   }
+// }
 
-class Worker extends People {
-      constructor(props) {
-        super(props);
-        this.rate = props.rate;
-        this.day = props.day;
-      }
-      getSalary() {
-          console.log(this.rate * this.day);
-      }
-    }
+// class Worker extends People {
+//       constructor(props) {
+//         super(props);
+//         this.rate = props.rate;
+//         this.day = props.day;
+//       }
+//       getSalary() {
+//           console.log(this.rate * this.day);
+//       }
+//     }
 
-const employee = new Worker({name:"Maksim", surname: "Makurin", rate: 3000, day: 20});
+// const employee = new Worker({name:"Maksim", surname: "Makurin", rate: 3000, day: 20});
 
-console.log(employee);
-employee.getFullName();
-employee.getSalary();
+// console.log(employee);
+// employee.getFullName();
+// employee.getSalary();
 
+// Пример работы с DOM-деревом
+
+// class Component {
+//   constructor(selector) {
+//     this.$el = document.querySelector(selector);
+//   }
+//   hide() {
+//     this.$el.style.display = "none";
+//   }
+//   show() {
+//     this.$el.style.display = "block";
+//   }
+// }
+
+// class Box extends Component {
+//   constructor(options) {
+//     super(options.selector);
+//     this.$el.style.width = this.$el.style.height = options.size + "px";
+//     this.$el.style.background = options.color;
+//   }
+// }
+
+// const box1 = new Box({
+//   selector: "#box1",
+//   size: 100,
+//   color: "red",
+// });
+
+// const box2 = new Box({
+//   selector: "#box2",
+//   size: 80,
+//   color: "blue",
+// });
+
+// class Circle extends Box {
+//   constructor(options) {
+//     super(options);
+//     this.$el.style.borderRadius = "50%";
+//   }
+// }
+
+// const myCircle = new Circle({
+//   selector: "#circle",
+//   size: 70,
+//   color: "green",
+// });
