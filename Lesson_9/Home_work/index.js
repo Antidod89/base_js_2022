@@ -187,3 +187,6 @@
 // console.log(string.reverse("Lorem ipsum dolor sit amet"));
 // console.log(string.ucFirst("lorem ipsum dolor sit amet"));
 // console.log(string.ucWords("lorem ipsum dolor sit amet"));
+
+const now = new Date().getFullYear();
+console.log(now);
