@@ -187,3 +187,50 @@
 // console.log(string.reverse("Lorem ipsum dolor sit amet"));
 // console.log(string.ucFirst("lorem ipsum dolor sit amet"));
 // console.log(string.ucWords("lorem ipsum dolor sit amet"));
+
+// 6. Реализуйте класс Validator, который будет проверять строки. К примеру, у него будет метод isEmail параметром принимает строку и проверяет, является ли она корректным емейлом или нет. Если является - возвращает true, если не является - то false. Кроме того, класс будет иметь следующие методы: метод isDomain для проверки домена, метод isDate для проверки даты и метод isPhone для проверки телефона.
+
+// class Validator {
+//   constructor() {}
+//   isEmail(str) {
+//     return /[^\s@]+@[^\s@]+\.[^\s@]+/.test(str);
+//   }
+//   isDomain(str) {
+//     return /(\w+\.)+\w+/g.test(str);
+//   }
+//   isDate(str) {
+//     return /^\d{2}[.-/]\d{2}[.-/]\d{4}$/.test(str);
+//   }
+//   isPhone(str) {
+//     return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(str);
+//   }
+// }
+
+// let validator = new Validator();
+
+// console.log(validator.isEmail("example@gmail.com"));
+// console.log(validator.isDomain("example.com"));
+// console.log(validator.isDate("12.04.2022"));
+// console.log(validator.isPhone("+71234567890"));
+
+// 7. Реализуйте класс Student (Студент), который будет наследовать от класса User, подобно тому, как это сделано в теоретической части урока. Этот класс должен иметь следующие свойства: name (имя, наследуется от User), surname (фамилия, наследуется от User), year (год поступления в вуз). Класс должен иметь метод getFullName() (наследуется от User), с помощью которого можно вывести одновременно имя и фамилию студента. Также класс должен иметь метод getCourse(), который будет выводить текущий курс студента (от 1 до 5). Курс вычисляется так: нужно от текущего года отнять год поступления в вуз. Текущий год получите самостоятельно.
+
+class User {
+  constructor(props) {
+    this.name = props.name;
+    this.surname = props.surname;
+  }
+  getFullName() {
+    return `${this.name} ${this.surname}`;
+  }
+}
+
+class Student extends User {
+    constructor(props) {
+        super(props);
+        this.year = props.year;
+    }
+    getCourse() {
+        
+    }
+}
