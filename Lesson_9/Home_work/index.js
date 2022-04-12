@@ -188,6 +188,7 @@
 // console.log(string.ucFirst("lorem ipsum dolor sit amet"));
 // console.log(string.ucWords("lorem ipsum dolor sit amet"));
 
+<<<<<<< HEAD
 // 6. Реализуйте класс Validator, который будет проверять строки. К примеру, у него будет метод isEmail параметром принимает строку и проверяет, является ли она корректным емейлом или нет. Если является - возвращает true, если не является - то false. Кроме того, класс будет иметь следующие методы: метод isDomain для проверки домена, метод isDate для проверки даты и метод isPhone для проверки телефона.
 
 // class Validator {
@@ -231,6 +232,7 @@ class Student extends User {
         this.year = props.year;
     }
     getCourse() {
-        
+        const now = new Date().getFullYear();
+console.log(now);
     }
 }
